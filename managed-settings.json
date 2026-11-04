@@ -1,0 +1,25 @@
+{
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "enableWeakerNestedSandbox": true,
+    "filesystem": {
+      "denyWrite": ["**/.git/**"]
+    },
+    "credentials": {
+      "files": [
+        { "path": "~/.claude/.credentials.json", "mode": "deny" }
+      ]
+    }
+  },
+  "permissions": {
+    "defaultMode": "default",
+    "disableAutoMode": "disable",
+    "ask": ["WebFetch", "WebSearch"],
+    "deny": [
+      "Edit(**/.git/**)"
+    ],
+    "disableBypassPermissionsMode": "disable"
+  }
+}
